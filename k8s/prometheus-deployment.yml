@@ -52,4 +52,4 @@ data:
       - job_name: 'jenkins'
         metrics_path: '/prometheus'
         static_configs:
-          - targets: ['13.42.66.253:8080']
+          - targets: ['13.42.56.232:8080']
