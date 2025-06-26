@@ -10,10 +10,15 @@ data:
       scrape_interval: 15s
 
     scrape_configs:
-      - job_name: 'backend'
+      - job_name: 'springboot'
+        metrics_path: /actuator/prometheus
         static_configs:
-          - targets: ['backend-service.default.svc.cluster.local:8080']
+          - targets: ['springboot-service:8080']
+        basic_auth:
+          username: 'admin'       # तुमचा Spring Boot username इथे टाका
+          password: 'admin123'    # तुमचा Spring Boot password इथे टाका
 
       - job_name: 'frontend'
+        metrics_path: /
         static_configs:
-          - targets: ['frontend-service.default.svc.cluster.local:80']
+          - targets: ['frontend-service:80']
