@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: kalpant/backend:z32
+          image: kalpant/backend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
