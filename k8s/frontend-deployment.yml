@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: kalpant/frontend:n70
+          image: sujit2000/frontend:n70
           imagePullPolicy: Always
           ports:
             - containerPort: 80
